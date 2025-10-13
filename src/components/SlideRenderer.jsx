@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { H1, H2, H3, Body, Quote, Number } from './base/Typography';
 import StatCard from './base/StatCard';
 import IconGrid from './base/IconGrid';
@@ -9,6 +10,33 @@ import BellCurve from './charts/BellCurve';
 import VerticalBarChart from './charts/VerticalBarChart';
 import * as Icons from 'lucide-react';
 import { useStyles } from '../contexts/StyleContext';
+
+// Animation variants
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: "easeOut" }
+};
+
+const fadeIn = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.5 }
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const scaleIn = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 0.5, ease: "easeOut" }
+};
 
 // Helper to get icon component from string name
 const getIcon = (iconName, size = 48) => {
@@ -75,9 +103,13 @@ const SlideRenderer = ({ slide }) => {
       case 'title':
         return (
           <div className="flex flex-col items-center justify-center h-full p-16 text-center">
-            <H1 className="mb-8" style={getTextColor()}>{content.title}</H1>
+            <motion.div {...fadeInUp}>
+              <H1 className="mb-8" style={getTextColor()}>{content.title}</H1>
+            </motion.div>
             {content.subtitle && (
-              <H2 className="font-normal" style={getTextColor()}>{content.subtitle}</H2>
+              <motion.div {...fadeInUp} transition={{ delay: 0.2, duration: 0.6 }}>
+                <H2 className="font-normal" style={getTextColor()}>{content.subtitle}</H2>
+              </motion.div>
             )}
           </div>
         );
@@ -95,31 +127,39 @@ const SlideRenderer = ({ slide }) => {
       case 'quote':
         return (
           <div className="flex flex-col items-center justify-center h-full p-16">
-            <div className="border-l-4 border-accent pl-6 py-4">
+            <motion.div {...fadeInUp} className="border-l-4 border-accent pl-6 py-4">
               <blockquote
                 className="text-2xl md:text-3xl font-medium text-primary leading-relaxed italic"
                 dangerouslySetInnerHTML={{ __html: `"${content.quote}"` }}
               />
-            </div>
+            </motion.div>
           </div>
         );
 
       case 'stats-grid':
         return (
           <div className="flex flex-col items-center justify-center h-full p-16">
-            <H2 className="mb-12 text-center">{content.heading}</H2>
-            <div className={`grid gap-8 w-full max-w-5xl grid-cols-${content.stats.length}`}>
+            <motion.div {...fadeInUp}>
+              <H2 className="mb-12 text-center">{content.heading}</H2>
+            </motion.div>
+            <motion.div
+              className={`grid gap-8 w-full max-w-5xl grid-cols-${content.stats.length}`}
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
               {content.stats.map((stat, idx) => (
-                <StatCard
-                  key={idx}
-                  value={stat.value}
-                  label={stat.label}
-                  description={stat.description}
-                  size="medium"
-                  color={stat.color || 'primary'}
-                />
+                <motion.div key={idx} variants={fadeInUp}>
+                  <StatCard
+                    value={stat.value}
+                    label={stat.label}
+                    description={stat.description}
+                    size="medium"
+                    color={stat.color || 'primary'}
+                  />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         );
 
@@ -177,14 +217,26 @@ const SlideRenderer = ({ slide }) => {
       case 'big-stat':
         return (
           <div className="flex flex-col items-center justify-center h-full p-16 text-center">
-            {content.heading && <H2 className="mb-12">{content.heading}</H2>}
+            {content.heading && (
+              <motion.div {...fadeInUp}>
+                <H2 className="mb-12">{content.heading}</H2>
+              </motion.div>
+            )}
             <div className="flex flex-col items-center">
-              <div className={`text-${content.size || '8xl'} font-bold text-${content.color || 'accent'} mb-8`}>
+              <motion.div
+                className={`text-${content.size || '8xl'} font-bold text-${content.color || 'accent'} mb-8`}
+                {...scaleIn}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
                 {content.value || content.stat}
-              </div>
-              <Body size="lg" className="max-w-2xl mx-auto">{content.description || content.body}</Body>
+              </motion.div>
+              <motion.div {...fadeInUp} transition={{ delay: 0.4, duration: 0.6 }}>
+                <Body size="lg" className="max-w-2xl mx-auto">{content.description || content.body}</Body>
+              </motion.div>
               {content.note && (
-                <Body size="sm" className="mt-4 text-gray-600 max-w-xl mx-auto">{content.note}</Body>
+                <motion.div {...fadeIn} transition={{ delay: 0.6, duration: 0.5 }}>
+                  <Body size="sm" className="mt-4 text-gray-600 max-w-xl mx-auto">{content.note}</Body>
+                </motion.div>
               )}
             </div>
           </div>
@@ -219,14 +271,27 @@ const SlideRenderer = ({ slide }) => {
       case 'icon-grid':
         return (
           <div className="flex flex-col justify-center h-full p-16">
-            <H2 className="mb-12 text-center">{content.heading}</H2>
-            <IconGrid
-              items={content.items.map(item => ({
-                ...item,
-                icon: getIcon(item.iconName, 48)
-              }))}
-              columns={content.columns || 3}
-            />
+            <motion.div {...fadeInUp}>
+              <H2 className="mb-12 text-center">{content.heading}</H2>
+            </motion.div>
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
+              <IconGrid
+                items={content.items.map(item => ({
+                  ...item,
+                  icon: getIcon(item.iconName, 48)
+                }))}
+                columns={content.columns || 3}
+              />
+            </motion.div>
+            {content.footer && (
+              <motion.div {...fadeIn} transition={{ delay: 0.5 }}>
+                <Body className="mt-8 text-center font-bold">{content.footer}</Body>
+              </motion.div>
+            )}
           </div>
         );
 
@@ -330,21 +395,32 @@ const SlideRenderer = ({ slide }) => {
       case 'calculation-steps':
         return (
           <div className="flex flex-col justify-center h-full p-8">
-            <H2 className="mb-8 text-center">{content.heading}</H2>
-            <div className="flex items-center justify-center gap-6 flex-wrap px-4">
+            <motion.div {...fadeInUp}>
+              <H2 className="mb-8 text-center">{content.heading}</H2>
+            </motion.div>
+            <motion.div
+              className="flex items-center justify-center gap-6 flex-wrap px-4"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
               {content.steps.map((step, i) => {
                 // Handle operator-only steps (like × or =)
                 if (step.operator) {
                   return (
-                    <div key={i} className="text-5xl font-bold text-accent px-2">
+                    <motion.div key={i} variants={fadeIn} className="text-5xl font-bold text-accent px-2">
                       {step.operator}
-                    </div>
+                    </motion.div>
                   );
                 }
 
                 // Handle regular calculation steps
                 return (
-                  <div key={i} className={`p-6 rounded-xl ${step.highlight ? 'bg-success/10 border-2 border-success' : 'bg-gray-100'} min-w-[200px]`}>
+                  <motion.div
+                    key={i}
+                    variants={fadeInUp}
+                    className={`p-6 rounded-xl ${step.highlight ? 'bg-success/10 border-2 border-success' : 'bg-gray-100'} min-w-[200px]`}
+                  >
                     {step.label && <Body className="mb-2 text-sm text-center">{step.label}</Body>}
                     <div className={`font-mono font-bold text-center ${step.highlight ? 'text-success' : 'text-primary'} text-3xl`}>
                       {step.value}
@@ -352,28 +428,37 @@ const SlideRenderer = ({ slide }) => {
                     {step.description && (
                       <Body className="mt-2 text-sm text-center">{step.description}</Body>
                     )}
-                  </div>
+                    {step.subvalue && (
+                      <Body className="mt-1 text-xs text-center text-gray-600">{step.subvalue}</Body>
+                    )}
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         );
 
       case 'chart-pie':
         return (
           <div className="flex flex-col justify-center h-full p-16">
-            <H2 className="mb-12 text-center">{content.heading}</H2>
-            <div className="w-full max-w-2xl mx-auto">
+            <motion.div {...fadeInUp}>
+              <H2 className="mb-12 text-center">{content.heading}</H2>
+            </motion.div>
+            <motion.div
+              className="w-full max-w-2xl mx-auto"
+              {...scaleIn}
+              transition={{ delay: 0.2, duration: 0.7 }}
+            >
               <SimplePieChart
                 data={content.data}
                 height={content.height || 400}
               />
               {content.note && (
-                <div className="mt-8 text-center">
+                <motion.div className="mt-8 text-center" {...fadeIn} transition={{ delay: 0.8 }}>
                   <Body size="lg" className="font-bold" dangerouslySetInnerHTML={{ __html: content.note }} />
-                </div>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           </div>
         );
 
@@ -440,15 +525,22 @@ const SlideRenderer = ({ slide }) => {
       case 'numbered-grid':
         return (
           <div className="flex flex-col justify-center h-full p-16">
-            <H2 className="mb-12 text-center">{content.heading}</H2>
-            <div className={`grid gap-8 max-w-4xl mx-auto grid-cols-${content.columns || 2}`}>
+            <motion.div {...fadeInUp}>
+              <H2 className="mb-12 text-center">{content.heading}</H2>
+            </motion.div>
+            <motion.div
+              className={`grid gap-8 max-w-4xl mx-auto grid-cols-${content.columns || 2}`}
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
               {content.items.map((item, i) => (
-                <div key={i} className="bg-accent/5 p-8 rounded-xl border-2 border-accent">
+                <motion.div key={i} variants={fadeInUp} className="bg-accent/5 p-8 rounded-xl border-2 border-accent">
                   <div className="text-5xl font-bold text-accent mb-4">{item.number}</div>
                   <Body size="lg">{item.text}</Body>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         );
 
