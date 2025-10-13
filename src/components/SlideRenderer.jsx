@@ -176,13 +176,16 @@ const SlideRenderer = ({ slide }) => {
 
       case 'big-stat':
         return (
-          <div className="flex flex-col items-center justify-center h-full p-16">
-            {content.heading && <H2 className="mb-12 text-center">{content.heading}</H2>}
-            <div className="text-center">
+          <div className="flex flex-col items-center justify-center h-full p-16 text-center">
+            {content.heading && <H2 className="mb-12">{content.heading}</H2>}
+            <div className="flex flex-col items-center">
               <div className={`text-${content.size || '8xl'} font-bold text-${content.color || 'accent'} mb-8`}>
                 {content.value || content.stat}
               </div>
-              <Body size="lg" className="max-w-2xl">{content.description || content.body}</Body>
+              <Body size="lg" className="max-w-2xl mx-auto">{content.description || content.body}</Body>
+              {content.note && (
+                <Body size="sm" className="mt-4 text-gray-600 max-w-xl mx-auto">{content.note}</Body>
+              )}
             </div>
           </div>
         );
@@ -249,6 +252,19 @@ const SlideRenderer = ({ slide }) => {
         return (
           <div className="flex flex-col justify-center h-full p-16">
             <H2 className="mb-8">{content.heading}</H2>
+
+            {/* Optional chart at the top */}
+            {content.chart && (
+              <div className="mb-8 max-w-md mx-auto">
+                <SimplePieChart
+                  data={content.chart.data}
+                  height={content.chart.height || 300}
+                />
+                {content.chart.note && (
+                  <Body className="mt-4 text-center text-sm text-gray-600">{content.chart.note}</Body>
+                )}
+              </div>
+            )}
 
             {/* Regular items - use 2-column grid if there are 2 or more */}
             {regularItems.length > 0 && (
@@ -474,10 +490,17 @@ const SlideRenderer = ({ slide }) => {
         );
 
       case 'multi-section':
+        // Support horizontal layout for side-by-side sections
+        const useHorizontalLayout = content.layout === 'horizontal' || content.layout === 'side-by-side';
+        const containerClass = useHorizontalLayout
+          ? 'grid grid-cols-2 gap-8 max-w-6xl mx-auto'
+          : 'max-w-4xl mx-auto space-y-8';
+
         return (
           <div className="flex flex-col justify-center h-full p-16">
-            <H2 className="mb-12 text-center">{content.heading}</H2>
-            <div className="max-w-4xl mx-auto space-y-8">
+            {content.heading && <H2 className="mb-12 text-center" style={getTextColor()}>{content.heading}</H2>}
+            {content.subheading && <H3 className="mb-8 text-center" style={getTextColor()}>{content.subheading}</H3>}
+            <div className={containerClass}>
               {content.sections.map((section, i) => {
                 // Handle section with just content (stat/description)
                 if (section.content) {
@@ -497,12 +520,17 @@ const SlideRenderer = ({ slide }) => {
                 if (section.type === 'grid') {
                   return (
                     <div key={i} className="grid grid-cols-3 gap-4">
-                      {section.items.map((item, j) => (
-                        <div key={j} className="bg-gray-100 p-6 rounded-xl text-center">
-                          <div className="font-bold text-lg mb-1">{item.label}</div>
-                          {item.sublabel && <div className="text-sm text-gray-600">{item.sublabel}</div>}
-                        </div>
-                      ))}
+                      {section.items.map((item, j) => {
+                        const itemHighlight = item.highlight ? 'bg-success/10 border-2 border-success' : 'bg-gray-100';
+                        return (
+                          <div key={j} className={`p-6 rounded-xl text-center ${itemHighlight}`}>
+                            <div className="font-bold text-lg mb-1">{item.label}</div>
+                            {item.sublabel && <div className="text-sm text-gray-600 mb-2">{item.sublabel}</div>}
+                            {item.price && <div className="text-xl font-mono font-bold text-accent mb-1">{item.price}</div>}
+                            {item.hourly && <div className={`text-sm font-semibold ${item.highlight ? 'text-success' : 'text-gray-700'}`}>{item.hourly}</div>}
+                          </div>
+                        );
+                      })}
                     </div>
                   );
                 }
@@ -513,7 +541,7 @@ const SlideRenderer = ({ slide }) => {
                     {section.title && <H3 className="mb-4">{section.title}</H3>}
                     {section.body && <Body className="mb-4">{section.body}</Body>}
                     {section.description && <Body className="mb-4">{section.description}</Body>}
-                    {section.text && <Body className="text-lg">{section.text}</Body>}
+                    {section.text && <Body className="text-lg" style={getTextColor()}>{section.text}</Body>}
                     {section.items && (
                       <ul className="space-y-2">
                         {section.items.map((item, j) => {
@@ -551,7 +579,7 @@ const SlideRenderer = ({ slide }) => {
               })}
             </div>
             {content.footer && (
-              <Body className="mt-8 text-center text-xl font-bold">{content.footer}</Body>
+              <Body className="mt-8 text-center text-xl font-bold" style={getTextColor()}>{content.footer}</Body>
             )}
           </div>
         );
@@ -613,6 +641,38 @@ const SlideRenderer = ({ slide }) => {
         return (
           <div className="flex flex-col justify-center h-full p-16">
             <div dangerouslySetInnerHTML={{ __html: content.html }} />
+          </div>
+        );
+
+      case 'tech-table':
+        return (
+          <div className="flex flex-col justify-center h-full p-16">
+            {content.heading && <H2 className="mb-8 text-center">{content.heading}</H2>}
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-gray-300">
+                    <th className="text-left p-3 font-semibold text-sm bg-gray-50">Technologie</th>
+                    <th className="text-left p-3 font-semibold text-sm bg-gray-50">Usage habituel</th>
+                    <th className="text-left p-3 font-semibold text-sm bg-gray-50">Rôle dans le studio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {content.rows?.map((row, idx) => (
+                    <tr key={idx} className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                      <td className="p-3 font-semibold text-sm text-accent">{row.tech}</td>
+                      <td className="p-3 text-xs text-gray-600">{row.normal_use}</td>
+                      <td className="p-3 text-xs text-gray-700">{row.studio_role}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {content.footer && (
+              <p className="text-center text-sm text-gray-600 italic mt-6">{content.footer}</p>
+            )}
           </div>
         );
 

@@ -269,6 +269,104 @@
     }
   },
   {
+    "id": "communication-externe",
+    "type": "multi-section",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Communication Externe",
+      "sections": [
+        {
+          "title": "Acquisition",
+          "items": [
+            "• Reels et contenu social",
+            "• Publicités vidéo",
+            "• Formation en ligne pour lead gen",
+            "• Contenu organique pour cultiver une audience"
+          ],
+          "description": "Se faire connaître, générer des leads, construire une présence sur les médias sociaux"
+        },
+        {
+          "title": "Vente",
+          "items": [
+            "• Vidéos de présentation produit",
+            "• Unboxing et démonstrations",
+            "• Témoignages clients",
+            "• Pages de vente vidéo"
+          ],
+          "description": "Augmenter la conversion, répondre aux objections, démontrer la valeur"
+        },
+        {
+          "title": "Rétention",
+          "items": [
+            "• Webinaires exclusifs",
+            "• Contenu éducatif continu (podcast)",
+            "• Tutoriels support après-vente",
+            "• Mise à jour produit/service"
+          ],
+          "description": "Garder les clients informés, faciliter l'utilisation, fidéliser"
+        }
+      ]
+    }
+  },
+  {
+    "id": "communication-interne",
+    "type": "multi-section",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Communication Interne",
+      "layout": "horizontal",
+      "sections": [
+        {
+          "title": "HR",
+          "items": [
+            "• Vidéos d'onboarding",
+            "• Processus de recrutement",
+            "• Culture d'entreprise",
+            "• Formation continue"
+          ],
+          "description": "Accélérer l'intégration des nouveaux employés, attirer les talents, standardiser la formation"
+        },
+        {
+          "title": "Investisseurs",
+          "items": [
+            "• Pitch deck vidéo",
+            "• Mise à jour trimestrielle",
+            "• Vision et roadmap",
+            "• Résultats et métriques"
+          ],
+          "description": "Communiquer la vision, transparence financière, lever des fonds"
+        },
+        {
+          "title": "Opérations",
+          "items": [
+            "• SOPs enregistrés",
+            "• Procédures techniques",
+            "• Best practices",
+            "• Documentation processus"
+          ],
+          "description": "Former les employés, standardiser les processus, réduire les erreurs, faciliter le scaling"
+        }
+      ]
+    }
+  },
+  {
+    "id": "video-not-just-social",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "La vidéo n'est pas juste un \"nice to have\" pour les médias sociaux. C'est un outil qui permet d'améliorer <span class=\"text-accent\">chaque aspect</span> d'une entreprise."
+    }
+  },
+  {
     "id": "industry-adoption",
     "type": "stats-grid",
     "background": {
@@ -478,6 +576,37 @@
     },
     "content": {
       "heading": "Location de studio professionnel",
+      "chart": {
+        "data": [
+          {
+            "name": "Under $1,000",
+            "value": 26,
+            "color": "primary"
+          },
+          {
+            "name": "Unknown",
+            "value": 23,
+            "color": "gray"
+          },
+          {
+            "name": "$1,000-$5,000",
+            "value": 22,
+            "color": "accent"
+          },
+          {
+            "name": "$5,000-$20,000",
+            "value": 17,
+            "color": "warning"
+          },
+          {
+            "name": "$20,000+",
+            "value": 12,
+            "color": "success"
+          }
+        ],
+        "height": 250,
+        "note": "Budgets de production vidéo en 2024"
+      },
       "items": [
         {
           "amount": "150$/heure",
@@ -808,6 +937,212 @@
     }
   },
   {
+    "id": "monthly-operating-costs",
+    "type": "cost-list",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Coûts d'opération mensuels (par studio)",
+      "items": [
+        {
+          "description": "Salaire technicien/support",
+          "amount": "4,500$"
+        },
+        {
+          "description": "Salaire gestionnaire (partiel)",
+          "amount": "2,000$"
+        },
+        {
+          "description": "Loyer + électricité",
+          "amount": "2,500$"
+        },
+        {
+          "description": "Internet/téléphone",
+          "amount": "200$"
+        },
+        {
+          "description": "Assurances",
+          "amount": "300$"
+        },
+        {
+          "description": "Maintenance/réparations",
+          "amount": "500$"
+        },
+        {
+          "description": "Marketing/acquisition",
+          "amount": "1,000$"
+        }
+      ],
+      "total": {
+        "amount": "11,000$/mois",
+        "description": "Total frais fixes mensuels",
+        "highlight": true
+      }
+    }
+  },
+  {
+    "id": "five-year-investment",
+    "type": "calculation-steps",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Investissement total sur 5 ans",
+      "steps": [
+        {
+          "label": "Investissement initial (équipement + aménagement):",
+          "value": "80,000$"
+        },
+        {
+          "label": "Coûts d'opération mensuels:",
+          "value": "11,000$/mois"
+        },
+        {
+          "operator": "×"
+        },
+        {
+          "label": "60 mois (5 ans):",
+          "value": "660,000$"
+        },
+        {
+          "operator": "="
+        },
+        {
+          "value": "740,000$",
+          "label": "Investissement total sur 5 ans",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "revenue-model",
+    "type": "calculation-steps",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Modèle de revenus (capacité optimale)",
+      "steps": [
+        {
+          "label": "Capacité: 450h/mois ÷ 10h par client =",
+          "value": "45 clients"
+        },
+        {
+          "label": "Revenus moyens par client:",
+          "value": "399$/mois"
+        },
+        {
+          "operator": "×"
+        },
+        {
+          "label": "45 clients:",
+          "value": "17,955$/mois"
+        },
+        {
+          "operator": "-"
+        },
+        {
+          "label": "Coûts d'opération:",
+          "value": "11,000$/mois"
+        },
+        {
+          "operator": "="
+        },
+        {
+          "value": "6,955$/mois",
+          "label": "Profit brut (avant impôts)",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "roi-timeline",
+    "type": "calculation-steps",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Retour sur investissement",
+      "steps": [
+        {
+          "label": "Investissement initial:",
+          "value": "80,000$"
+        },
+        {
+          "operator": "÷"
+        },
+        {
+          "label": "Profit mensuel:",
+          "value": "6,955$/mois"
+        },
+        {
+          "operator": "="
+        },
+        {
+          "value": "11.5 mois",
+          "label": "Temps pour rentabiliser l'investissement initial",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "pricing-explained",
+    "type": "cost-list",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Comment on arrive à 12.48$/h",
+      "items": [
+        {
+          "description": "Amortissement équipement (5 ans)",
+          "amount": "3$/h"
+        },
+        {
+          "description": "Salaires (support + gestion)",
+          "amount": "7$/h"
+        },
+        {
+          "description": "Loyer + électricité",
+          "amount": "5$/h"
+        },
+        {
+          "description": "Maintenance + assurances",
+          "amount": "2$/h"
+        },
+        {
+          "description": "Marketing",
+          "amount": "2.5$/h"
+        }
+      ],
+      "total": {
+        "amount": "19.50$/h",
+        "description": "Coût réel par heure (à capacité optimale)",
+        "highlight": false
+      }
+    }
+  },
+  {
+    "id": "profit-margin-reality",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "On perd de l'argent sur les forfaits Découverte et Standard. Le forfait Pro à 12.48$/h génère une <span class=\"text-accent\">petite marge</span>. Le vrai profit vient du volume et de la fidélisation."
+    }
+  },
+  {
     "id": "enter-bunkers",
     "type": "title",
     "background": {
@@ -984,6 +1319,171 @@
     }
   },
   {
+    "id": "tech-stack-intro",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "Vous n'avez aucune idée à quel point c'est compliqué de rendre les choses <span class=\"text-accent\">simples</span>."
+    }
+  },
+  {
+    "id": "technology-stack",
+    "type": "tech-table",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Technologies orchestrées en un seul système",
+      "rows": [
+        {
+          "tech": "Dante",
+          "normal_use": "Routage audio pro (églises, théâtres, broadcast)",
+          "studio_role": "Matrice audio IP entre micros, interfaces et ordis"
+        },
+        {
+          "tech": "Art-Net/DMX",
+          "normal_use": "Contrôle d'éclairage de spectacles",
+          "studio_role": "Pilotage des lumières depuis l'automatisation"
+        },
+        {
+          "tech": "NDI",
+          "normal_use": "Transport vidéo IP (broadcast/studio)",
+          "studio_role": "Flux caméras / capture d'écran sans fil"
+        },
+        {
+          "tech": "vMix",
+          "normal_use": "Diffusion/production broadcast",
+          "studio_role": "Commutation, enregistrement, titres; contrôle via API"
+        },
+        {
+          "tech": "Home Assistant",
+          "normal_use": "Automatisation résidentielle",
+          "studio_role": "Orchestrateur: scènes, états, horaires, webhooks"
+        },
+        {
+          "tech": "MQTT",
+          "normal_use": "Bus M2M/IIoT",
+          "studio_role": "Événements/commandes temps réel entre tous les modules"
+        },
+        {
+          "tech": "Zigbee & Z-Wave",
+          "normal_use": "Protocoles IoT bas débit",
+          "studio_role": "Capteurs, relais et prises intégrés à HA"
+        },
+        {
+          "tech": "ESP32/Arduino",
+          "normal_use": "Électronique sur mesure",
+          "studio_role": "Nœuds I/O: moteurs/steppers, relais, capteurs"
+        },
+        {
+          "tech": "NSSM (Services Windows)",
+          "normal_use": "Wrapper de services",
+          "studio_role": "Démarre/monitore des daemons qui parlent MQTT"
+        },
+        {
+          "tech": "Onshape",
+          "normal_use": "Plateforme CAD 3D",
+          "studio_role": "Conception des pièces/mécanismes"
+        },
+        {
+          "tech": "Impression 3D",
+          "normal_use": "Prototypage",
+          "studio_role": "Pièces pour caméras robotisées (pan/tilt/axe Z)"
+        },
+        {
+          "tech": "Profilés d'alu extrudé (T-slot)",
+          "normal_use": "Châssis/DIY industriel",
+          "studio_role": "Structure modulaire des rigs et supports"
+        },
+        {
+          "tech": "Strapi",
+          "normal_use": "Headless CMS",
+          "studio_role": "Backend/API pour presets, scènes, assets"
+        },
+        {
+          "tech": "Vue.js / Nuxt",
+          "normal_use": "Framework web",
+          "studio_role": "UI opérateur et panneaux de contrôle"
+        },
+        {
+          "tech": "Discourse",
+          "normal_use": "Forum/communauté",
+          "studio_role": "Support, feedback, doc vivante"
+        }
+      ],
+      "footer": "Tout ça, orchestré en un seul système cohérent et automatisé."
+    }
+  },
+  {
+    "id": "passion-quadrants",
+    "type": "icon-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Ce projet me permet de mélanger",
+      "items": [
+        {
+          "iconName": "Camera",
+          "title": "Côté artiste",
+          "description": "de vidéaste"
+        },
+        {
+          "iconName": "Code",
+          "title": "Côté geek",
+          "description": "programmeur/ingénieur"
+        },
+        {
+          "iconName": "Wrench",
+          "title": "Côté manuel",
+          "description": "pour faire les studios"
+        },
+        {
+          "iconName": "Heart",
+          "title": "Côté humain",
+          "description": "design d'expérience"
+        }
+      ],
+      "columns": 2,
+      "footer": "Ma passion est parfaitement alignée avec le besoin de 80% des entreprises."
+    }
+  },
+  {
+    "id": "client-goals",
+    "type": "icon-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Pour créer un système qui permet aux entreprises de créer",
+      "items": [
+        {
+          "iconName": "Sparkles",
+          "title": "La plus belle vidéo possible"
+        },
+        {
+          "iconName": "Zap",
+          "title": "Le plus vite possible"
+        },
+        {
+          "iconName": "Smile",
+          "title": "Avec le moins de casse-tête possible"
+        },
+        {
+          "iconName": "DollarSign",
+          "title": "Le moins cher possible"
+        }
+      ],
+      "columns": 2
+    }
+  },
+  {
     "id": "business-model-title",
     "type": "title",
     "background": {
@@ -1044,6 +1544,86 @@
     }
   },
   {
+    "id": "pricing-packages",
+    "type": "multi-section",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Forfaits d'abonnement",
+      "subheading": "1 jeton = 1 bloc de 5 heures",
+      "sections": [
+        {
+          "type": "grid",
+          "items": [
+            {
+              "label": "Forfait Découverte",
+              "sublabel": "2 jetons/mois",
+              "price": "249$/mois",
+              "hourly": "24.90$/h"
+            },
+            {
+              "label": "Forfait Standard",
+              "sublabel": "4 jetons/mois",
+              "price": "399$/mois",
+              "hourly": "19.95$/h"
+            },
+            {
+              "label": "Forfait Pro",
+              "sublabel": "8 jetons/mois",
+              "price": "499$/mois",
+              "hourly": "12.48$/h",
+              "highlight": true
+            }
+          ]
+        }
+      ],
+      "footer": "Meilleur forfait: 12.48$/heure | Pire forfait: 24.91$/heure"
+    }
+  },
+  {
+    "id": "aligned-incentives",
+    "type": "feature-list",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Incitatifs alignés",
+      "features": [
+        {
+          "iconName": "TrendingDown",
+          "title": "Utilisation fréquente = prix plus bas",
+          "description": "Si tu vas au studio une fois par semaine, tu n'auras presque jamais besoin de support"
+        },
+        {
+          "iconName": "Clock",
+          "title": "Pas de stress de temps",
+          "description": "5 heures par bloc. Invité en retard? Pas de problème. Prends ton temps pour tester."
+        },
+        {
+          "iconName": "Calendar",
+          "title": "Réserver est simple",
+          "description": "Tu choisis ton bloc, tu réserves. Accès autonome, pas de réceptionniste."
+        }
+      ]
+    }
+  },
+  {
+    "id": "booking-interface",
+    "type": "image-text",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Système de réservation",
+      "body": "Interface simple. Choisis ton bloc (matin, après-midi, soir). Réserve. C'est fait.",
+      "imagePlaceholder": "Screenshot du système de réservation"
+    }
+  },
+  {
     "id": "onboarding-mandatory",
     "type": "multi-section",
     "background": {
@@ -1090,6 +1670,35 @@
     }
   },
   {
+    "id": "early-career",
+    "type": "numbered-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Les débuts (2003-2012)",
+      "items": [
+        {
+          "number": "1",
+          "text": "McDonald's - Premier emploi, apprendre à servir des clients"
+        },
+        {
+          "number": "2",
+          "text": "WETS (2007) - Première entreprise à 16 ans. E-commerce porte-à-porte"
+        },
+        {
+          "number": "3",
+          "text": "Consultant freelance - Sites web et graphisme pendant les études"
+        },
+        {
+          "number": "4",
+          "text": "Blogue (2012) - Partage hebdomadaire de résultats clients"
+        }
+      ]
+    }
+  },
+  {
     "id": "timeline",
     "type": "timeline",
     "background": {
@@ -1099,6 +1708,18 @@
     "content": {
       "heading": "Mon parcours",
       "events": [
+        {
+          "year": "2003",
+          "title": "McDonald's",
+          "description": "Premier emploi",
+          "highlight": false
+        },
+        {
+          "year": "2007-2012",
+          "title": "Consultant freelance",
+          "description": "Sites web, graphisme",
+          "highlight": false
+        },
         {
           "year": "2007",
           "title": "WETS - Première entreprise",
@@ -1227,6 +1848,7 @@
     },
     "content": {
       "heading": "Prochaines étapes",
+      "layout": "horizontal",
       "sections": [
         {
           "text": "Si vous voulez voir le studio en personne, contactez-moi."
