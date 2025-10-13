@@ -1,0 +1,1253 @@
+{
+  "styles": {
+    "h1": {
+      "fontFamily": "Playfair Display",
+      "fontSize": "3.75rem",
+      "fontWeight": "700",
+      "color": "#1a1a1a"
+    },
+    "h2": {
+      "fontFamily": "Inter",
+      "fontSize": "2.25rem",
+      "fontWeight": "600",
+      "color": "#1a1a1a"
+    },
+    "h3": {
+      "fontFamily": "Inter",
+      "fontSize": "1.875rem",
+      "fontWeight": "500",
+      "color": "#1a1a1a"
+    },
+    "accentColor": "pink",
+    "defaultBackground": {
+      "type": "color",
+      "value": "#FFFFFF"
+    }
+  },
+  "slides": 
+[
+  {
+    "id": "title",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "title": "Les Bunkers",
+      "subtitle": "Une entreprise de studio vidéo qui ne fait, sur papier, absolument aucun sens."
+    }
+  },
+  {
+    "id": "why-video-question",
+    "type": "text-centered",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Pourquoi produire des vidéos?",
+      "body": "Mais avant, il faut qu'on commence par s'entendre sur l'état des choses."
+    }
+  },
+  {
+    "id": "interview-analogy",
+    "type": "text-centered",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Pourquoi passer une entrevue en personne avant d'engager un candidat?",
+      "body": "Un CV avec une lettre de recommandation, ça ne fait pas? Pourquoi est-ce que, si tu veux combler un poste important, tu prends le temps d'aller souper avec la personne?"
+    }
+  },
+  {
+    "id": "rich-medium",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "La vidéo est le moyen de communication le plus <span class=\"text-accent\">riche</span>."
+    }
+  },
+  {
+    "id": "what-video-captures",
+    "type": "icon-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Ce que la vidéo capture",
+      "items": [
+        {
+          "iconName": "Eye",
+          "title": "Comportement",
+          "description": "Comment la personne se comporte"
+        },
+        {
+          "iconName": "Ear",
+          "title": "Ton de voix",
+          "description": "Entendre le ton et les nuances"
+        },
+        {
+          "iconName": "Users",
+          "title": "Interactions",
+          "description": "Observer les interactions avec les autres"
+        }
+      ],
+      "columns": 3
+    }
+  },
+  {
+    "id": "ecommerce-impact",
+    "type": "stats-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Impact E-Commerce",
+      "stats": [
+        {
+          "value": "+37%",
+          "label": "Ajouts au panier",
+          "color": "success"
+        },
+        {
+          "value": "+9.7%",
+          "label": "Ventes",
+          "color": "success"
+        },
+        {
+          "value": "-5%",
+          "label": "Taux de retour",
+          "description": "Réduction absolue",
+          "color": "accent"
+        }
+      ]
+    }
+  },
+  {
+    "id": "return-rate-detail",
+    "type": "comparison",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Réduction du taux de retour",
+      "before": 20,
+      "after": 15,
+      "label": "Taux de retour (%)",
+      "unit": "%",
+      "color": "success",
+      "note": "C'est immense! De 20% à 15%, c'est une réduction absolue de 5%."
+    }
+  },
+  {
+    "id": "course-math-comparison",
+    "type": "two-column",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Scénario cours à 300$: Sans vidéo vs. Avec vidéo",
+      "left": {
+        "title": "Sans vidéo",
+        "items": [
+          {
+            "label": "CAC:",
+            "value": "250$"
+          },
+          {
+            "label": "Profit:",
+            "value": "50$"
+          },
+          {
+            "label": "Marge:",
+            "value": "16%",
+            "highlight": true
+          }
+        ],
+        "color": "gray"
+      },
+      "right": {
+        "title": "Avec vidéo",
+        "items": [
+          {
+            "label": "CAC:",
+            "value": "125$"
+          },
+          {
+            "label": "Profit:",
+            "value": "175$"
+          },
+          {
+            "label": "Marge:",
+            "value": "58%",
+            "highlight": true
+          }
+        ],
+        "color": "success"
+      },
+      "footer": "3.6× amélioration de la marge de profit!"
+    }
+  },
+  {
+    "id": "course-profit-pies",
+    "type": "comparison-pies",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Où va l'argent? (Cours à 300$)",
+      "charts": [
+        {
+          "title": "Sans vidéo",
+          "data": [
+            {
+              "name": "CAC",
+              "value": 250,
+              "color": "gray"
+            },
+            {
+              "name": "Profit",
+              "value": 50,
+              "color": "accent"
+            }
+          ],
+          "note": "Tu gardes seulement 50$ (16%)"
+        },
+        {
+          "title": "Avec vidéo",
+          "data": [
+            {
+              "name": "CAC",
+              "value": 125,
+              "color": "gray"
+            },
+            {
+              "name": "Profit",
+              "value": 175,
+              "color": "success"
+            }
+          ],
+          "note": "Tu gardes 175$ (58%)"
+        }
+      ],
+      "footer": "3.5× plus de profit dans ta poche!"
+    }
+  },
+  {
+    "id": "newsletter-impact",
+    "type": "stats-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Impact sur les infolettres",
+      "stats": [
+        {
+          "value": "+65%",
+          "label": "Taux de clic",
+          "color": "success"
+        },
+        {
+          "value": "-26%",
+          "label": "Désabonnements",
+          "color": "success"
+        }
+      ],
+      "columns": 2
+    }
+  },
+  {
+    "id": "industry-adoption",
+    "type": "stats-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Adoption de l'industrie",
+      "stats": [
+        {
+          "value": "89%",
+          "label": "Font de la vidéo",
+          "color": "primary"
+        },
+        {
+          "value": "93%",
+          "label": "Bon ROI",
+          "color": "success"
+        },
+        {
+          "value": "68%",
+          "label": "Veulent commencer",
+          "color": "warning"
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-barrier",
+    "type": "big-stat",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Mais alors, quel est le problème?",
+      "stat": "63%",
+      "body": "des chefs d'entreprises citent le coût et la difficulté technique comme raisons."
+    }
+  },
+  {
+    "id": "traditional-costs-title",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#FF6B35"
+    },
+    "content": {
+      "title": "Faire de la vidéo, ça coûte cher!!!!"
+    },
+    "theme": "dark"
+  },
+  {
+    "id": "cost-distribution",
+    "type": "bell-curve",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Distribution des coûts de production vidéo",
+      "data": [
+        {
+          "x": 500,
+          "y": 0.05
+        },
+        {
+          "x": 1000,
+          "y": 0.15
+        },
+        {
+          "x": 1500,
+          "y": 0.35
+        },
+        {
+          "x": 2000,
+          "y": 0.55
+        },
+        {
+          "x": 2500,
+          "y": 0.75
+        },
+        {
+          "x": 3000,
+          "y": 0.85
+        },
+        {
+          "x": 3500,
+          "y": 0.9
+        },
+        {
+          "x": 4000,
+          "y": 0.92
+        },
+        {
+          "x": 4500,
+          "y": 0.9
+        },
+        {
+          "x": 5000,
+          "y": 0.85
+        },
+        {
+          "x": 6000,
+          "y": 0.7
+        },
+        {
+          "x": 7500,
+          "y": 0.5
+        },
+        {
+          "x": 10000,
+          "y": 0.35
+        },
+        {
+          "x": 15000,
+          "y": 0.2
+        },
+        {
+          "x": 20000,
+          "y": 0.12
+        },
+        {
+          "x": 30000,
+          "y": 0.08
+        },
+        {
+          "x": 50000,
+          "y": 0.04
+        },
+        {
+          "x": 75000,
+          "y": 0.02
+        },
+        {
+          "x": 100000,
+          "y": 0.01
+        }
+      ],
+      "highlight": {
+        "min": 2500,
+        "max": 5000,
+        "label": "2.5K - 5K"
+      },
+      "xLabel": "Coût par projet ($)",
+      "note": "La majorité des projets vidéo coûtent entre 2,500$ et 5,000$"
+    }
+  },
+  {
+    "id": "price-comparison",
+    "type": "bar-chart",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Comparaison des tarifs horaires",
+      "data": [
+        {
+          "name": "Équipe sur place",
+          "value": 625,
+          "color": "accent",
+          "description": "~625$ /heure (5000$/8h)"
+        },
+        {
+          "name": "Studio professionnel",
+          "value": 450,
+          "color": "warning",
+          "description": "300-600$ /heure"
+        },
+        {
+          "name": "Studio de podcast",
+          "value": 200,
+          "color": "primary",
+          "description": "150-250$ /heure"
+        },
+        {
+          "name": "Les Bunkers",
+          "value": 12.48,
+          "color": "success",
+          "description": "12.48$ /heure"
+        }
+      ],
+      "xLabel": "Coût horaire ($)",
+      "note": "Les Bunkers: 16× moins cher qu'un studio de podcast, 50× moins cher qu'une équipe de tournage"
+    }
+  },
+  {
+    "id": "on-location-shoots",
+    "type": "big-stat",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Équipe sur place",
+      "stat": "2,500$ - 5,000$",
+      "body": "par journée de tournage"
+    }
+  },
+  {
+    "id": "studio-rental",
+    "type": "cost-list",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Location de studio professionnel",
+      "items": [
+        {
+          "amount": "150$/heure",
+          "description": "Juste le local (sans équipement)",
+          "highlight": false
+        },
+        {
+          "amount": "+1,500$/jour",
+          "description": "Location d'équipement (caméras, lumières, micros)",
+          "highlight": false
+        },
+        {
+          "amount": "300$ - 600$/h",
+          "description": "Total (sans technicien)",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "podcast-studio",
+    "type": "big-stat",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Studio de podcast",
+      "stat": "150$ - 250$/h",
+      "body": "Avec technicien",
+      "note": "Packages souvent dans les 5 chiffres"
+    }
+  },
+  {
+    "id": "diy-temptation",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "\"Je vais m'acheter une caméra et ça va finir là!\"",
+      "subtext": "Hehehe, good luck with that!"
+    }
+  },
+  {
+    "id": "diy-equipment-costs",
+    "type": "cost-list",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Équipement de base (DIY)",
+      "items": [
+        {
+          "description": "Caméra + lentille",
+          "amount": "2,500$"
+        },
+        {
+          "description": "Lumière (×3)",
+          "amount": "1,200$"
+        },
+        {
+          "description": "Microphone (×2)",
+          "amount": "800$"
+        },
+        {
+          "description": "Interface audio",
+          "amount": "750$"
+        },
+        {
+          "description": "Panneaux sonores (×10)",
+          "amount": "1,500$"
+        },
+        {
+          "description": "Table, chaises, déco",
+          "amount": "Variable"
+        }
+      ],
+      "total": {
+        "amount": "Minimum 10,000$",
+        "description": "(Configuration 1 caméra)",
+        "highlight": true
+      }
+    }
+  },
+  {
+    "id": "cheap-trap",
+    "type": "quote-with-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "Tu vas vouloir économiser au début, donc tu vas acheter du cheap. Résultat?",
+      "items": [
+        {
+          "emoji": "😳",
+          "label": "Trop honte pour publier"
+        },
+        {
+          "emoji": "💸",
+          "label": "Acheter tout 2× fois"
+        }
+      ]
+    }
+  },
+  {
+    "id": "complexity-questions",
+    "type": "list-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "La complexité technique",
+      "items": [
+        {
+          "title": "Ouverture (Aperture)",
+          "subtitle": "f/1.4, f/1.8, f/2.8, f/4, f/5.6, f/8, f/11, f/16"
+        },
+        {
+          "title": "Vitesse d'obturation",
+          "subtitle": "1/30, 1/48, 1/50, 1/60, 1/100, 1/120, 1/200"
+        },
+        {
+          "title": "Sensibilité (ISO)",
+          "subtitle": "100, 200, 400, 800, 1600, 3200, 6400, 12800"
+        },
+        {
+          "title": "Images/seconde",
+          "subtitle": "23.976, 24, 25, 29.97, 30, 50, 59.94, 60, 120"
+        },
+        {
+          "title": "Codec vidéo",
+          "subtitle": "H.264, H.265/HEVC, ProRes, DNxHD, AV1, VP9"
+        },
+        {
+          "title": "Format conteneur",
+          "subtitle": "MOV, MP4, MKV, AVI, ProRes Raw"
+        },
+        {
+          "title": "Balance des blancs",
+          "subtitle": "2800K, 3200K, 4300K, 5600K, 6500K, 7500K"
+        },
+        {
+          "title": "Profil couleur",
+          "subtitle": "Rec.709, Log, S-Log3, V-Log, HLG, Raw"
+        },
+        {
+          "title": "Type de micros",
+          "subtitle": "Dynamique, Condensateur, Ruban, USB, XLR"
+        },
+        {
+          "title": "Interface audio",
+          "subtitle": "Scarlett, Apollo, Clarett, UMC, PreSonus"
+        },
+        {
+          "title": "Setup d'éclairage",
+          "subtitle": "Key, Fill, Rim, Back, Hair, Practical"
+        },
+        {
+          "title": "Style d'éclairage",
+          "subtitle": "Rembrandt, Paramount, Loop, Butterfly, Split"
+        }
+      ],
+      "columns": 2
+    }
+  },
+  {
+    "id": "time-cost",
+    "type": "calculation-steps",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Le coût du temps",
+      "steps": [
+        {
+          "value": "1,000+ heures",
+          "label": "D'apprentissage (plusieurs années)"
+        },
+        {
+          "operator": "×"
+        },
+        {
+          "value": "50$/h",
+          "label": "Valeur de ton temps"
+        },
+        {
+          "operator": "="
+        },
+        {
+          "value": "50,000$",
+          "label": "Coût d'opportunité",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-math-title",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#1a1a1a"
+    },
+    "content": {
+      "title": "Les mathématiques",
+      "subtitle": "Comment est-ce possible à 12.48$/h?"
+    }
+  },
+  {
+    "id": "first-principles",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "Quand je me lance dans un projet, la première chose que je fais, c'est de jeter au poubelle ce que je pense savoir et je reviens au premier principe."
+    }
+  },
+  {
+    "id": "studio-cost",
+    "type": "big-stat",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Coût de construction d'un studio",
+      "stat": "60K - 80K$"
+    }
+  },
+  {
+    "id": "capacity-math",
+    "type": "calculation-steps",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Calcul de capacité",
+      "steps": [
+        {
+          "label": "30 jours × 3 blocs × 5 heures =",
+          "value": "450 heures/mois",
+          "highlight": false
+        },
+        {
+          "label": "450h ÷ 10h par entreprise =",
+          "value": "45 entreprises",
+          "highlight": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "cost-per-company",
+    "type": "calculation-steps",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Coût par entreprise",
+      "steps": [
+        {
+          "label": "80,000$ sur 5 ans à 8% =",
+          "value": "1,611$/mois"
+        },
+        {
+          "label": "1,611$ ÷ 45 entreprises =",
+          "value": "35$/mois"
+        },
+        {
+          "label": "+ loyer, électricité, maintenance ≈",
+          "value": "50$/mois",
+          "subvalue": "= 5$/heure",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-real-cost",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#FF6B35"
+    },
+    "content": {
+      "title": "Le salaire!",
+      "subtitle": "C'est ça la réponse. C'est pour ça que ça coûte cher!"
+    },
+    "theme": "dark"
+  },
+  {
+    "id": "salary-breakdown",
+    "type": "chart-pie",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Décomposition des coûts sur 5 ans",
+      "data": [
+        {
+          "name": "Salaires",
+          "value": 1350000,
+          "color": "accent"
+        },
+        {
+          "name": "Équipement",
+          "value": 100000,
+          "color": "gray"
+        },
+        {
+          "name": "Autres",
+          "value": 150000,
+          "color": "warning"
+        }
+      ],
+      "note": "L'équipement représente seulement 6% des coûts!"
+    }
+  },
+  {
+    "id": "enter-bunkers",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#1a1a1a"
+    },
+    "content": {
+      "title": "Les Bunkers",
+      "subtitle": "Une entreprise qui ne fait aucun sens... entre en jeu"
+    }
+  },
+  {
+    "id": "elevator-pitch",
+    "type": "text-centered",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "L'Elevator Pitch",
+      "body": "Les Bunkers, c'est un réseau de studios d'enregistrement vidéo intelligents, conçus spécialement pour permettre aux PME québécoises de créer du contenu de très haute qualité en un temps record — aucune compétence technique requise."
+    }
+  },
+  {
+    "id": "bunkers-features",
+    "type": "icon-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Caractéristiques",
+      "items": [
+        {
+          "iconName": "Camera",
+          "title": "4 caméras 4K",
+          "description": "Enregistrement simultané"
+        },
+        {
+          "iconName": "Mic",
+          "title": "Micros pro",
+          "description": "Audio de qualité studio"
+        },
+        {
+          "iconName": "Monitor",
+          "title": "Téléprompteur",
+          "description": "Pour lecture de scripts"
+        },
+        {
+          "iconName": "Sun",
+          "title": "Éclairage pro",
+          "description": "Toujours parfait"
+        },
+        {
+          "iconName": "Video",
+          "title": "Écran vert",
+          "description": "Arrière-plans personnalisés"
+        },
+        {
+          "iconName": "Zap",
+          "title": "Un bouton",
+          "description": "Prêt à enregistrer"
+        }
+      ],
+      "columns": 3
+    }
+  },
+  {
+    "id": "use-cases",
+    "type": "icon-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Cas d'usage",
+      "items": [
+        {
+          "iconName": "Users",
+          "title": "Webinaires"
+        },
+        {
+          "iconName": "GraduationCap",
+          "title": "Cours en ligne"
+        },
+        {
+          "iconName": "Mic",
+          "title": "Podcasts"
+        },
+        {
+          "iconName": "Package",
+          "title": "Démonstrations produits"
+        },
+        {
+          "iconName": "Megaphone",
+          "title": "Publicités"
+        },
+        {
+          "iconName": "TrendingUp",
+          "title": "Vidéos de vente"
+        }
+      ],
+      "columns": 3
+    }
+  },
+  {
+    "id": "the-price",
+    "type": "big-stat",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Tout cela, à partir de seulement",
+      "stat": "12.48$/h",
+      "body": "15× moins cher qu'un studio de podcast\n50× moins cher qu'une équipe de tournage"
+    }
+  },
+  {
+    "id": "no-catch",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#FF6B35"
+    },
+    "content": {
+      "title": "Il n'y a PAS de pogne!",
+      "subtitle": "C'est probablement la seule fois de votre vie que vous allez voir une offre trop belle pour être vraie qui est actuellement vraie!"
+    },
+    "theme": "dark"
+  },
+  {
+    "id": "smart-features",
+    "type": "feature-list",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Studio intelligent",
+      "features": [
+        {
+          "iconName": "Users",
+          "title": "Reconnaissance utilisateur",
+          "description": "Le studio te reconnaît et charge tes préférences"
+        },
+        {
+          "iconName": "Zap",
+          "title": "Configuration automatique",
+          "description": "Caméras et éclairage s'ajustent automatiquement"
+        },
+        {
+          "iconName": "Monitor",
+          "title": "Interface tactile",
+          "description": "Contrôle complet de tous les éléments"
+        },
+        {
+          "iconName": "CheckCircle",
+          "title": "Récupération automatique",
+          "description": "Redémarre et tout fonctionne"
+        }
+      ]
+    }
+  },
+  {
+    "id": "accessibility",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "C'est tellement simple que j'ai même plusieurs retraités qui s'en servent! Et je me fais souvent dire \"Wow, jamais de ma vie je pensais que j'allais être capable de faire des vidéos comme ça!\""
+    }
+  },
+  {
+    "id": "business-model-title",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "title": "Le modèle d'affaires"
+    }
+  },
+  {
+    "id": "recurring-clients",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "Je travaille uniquement avec des clients qui ont des besoins récurrents. La production vidéo, c'est un outil essentiel. Point final."
+    }
+  },
+  {
+    "id": "token-system",
+    "type": "multi-section",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Système de jetons",
+      "sections": [
+        {
+          "highlight": true,
+          "content": {
+            "stat": "1 jeton = 1 bloc",
+            "description": "1 bloc = 5 heures (matin, après-midi ou soir)"
+          }
+        },
+        {
+          "type": "grid",
+          "items": [
+            {
+              "label": "Matin",
+              "sublabel": "5 heures"
+            },
+            {
+              "label": "Après-midi",
+              "sublabel": "5 heures"
+            },
+            {
+              "label": "Soir",
+              "sublabel": "5 heures"
+            }
+          ]
+        }
+      ],
+      "footer": "5 minutes ou 5 heures = même prix!"
+    }
+  },
+  {
+    "id": "onboarding-mandatory",
+    "type": "multi-section",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Formation obligatoire",
+      "sections": [
+        {
+          "title": "Étape 1: Vidéoconférence (45 min)",
+          "items": [
+            "Tes besoins spécifiques",
+            "Le portail de réservation",
+            "La communauté privée",
+            "La documentation"
+          ]
+        },
+        {
+          "title": "Étape 2: Formation en studio (1 bloc GRATUIT)",
+          "description": "Formation semi-supervisée avec 2 appels de support à distance",
+          "timeline": [
+            "12:30 - Arrivée",
+            "14:00 - Appel 1",
+            "14:45 - Pratique",
+            "16:30 - Appel 2"
+          ],
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "who-am-i",
+    "type": "image-text",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Qui suis-je?",
+      "body": "Mon nom est Olivier Lambert.",
+      "imagePlaceholder": "Photo d'Olivier"
+    }
+  },
+  {
+    "id": "timeline",
+    "type": "timeline",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Mon parcours",
+      "events": [
+        {
+          "year": "2007",
+          "title": "WETS - Première entreprise",
+          "description": "E-commerce porte-à-porte à 16 ans",
+          "highlight": true
+        },
+        {
+          "year": "2012",
+          "title": "Blogue marketing",
+          "description": "Partage hebdomadaire de résultats clients",
+          "highlight": false
+        },
+        {
+          "year": "2013",
+          "title": "1,000 abonnés",
+          "description": "Première milestone",
+          "highlight": false
+        },
+        {
+          "year": "2014",
+          "title": "Meilleur blogue marketing",
+          "description": "Prix au Canada + Formation Facebook Ads",
+          "stats": "$1M+ en revenus",
+          "highlight": true
+        },
+        {
+          "year": "2015",
+          "title": "La Tranchée",
+          "description": "Seule communauté entrepreneur en ligne au Québec",
+          "stats": "7,991 entreprises aidées | $3M revenus",
+          "highlight": true
+        },
+        {
+          "year": "2016",
+          "title": "Scotch & Domination Mondiale",
+          "description": "Podcast avec des leaders québécois",
+          "stats": "7,000 téléchargements/épisode",
+          "highlight": true
+        },
+        {
+          "year": "2017",
+          "title": "Double Ta Valeur",
+          "description": "Livre sur la productivité",
+          "stats": "50,000+ copies vendues",
+          "highlight": true
+        },
+        {
+          "year": "2024",
+          "title": "Les Bunkers",
+          "description": "Studios vidéo intelligents",
+          "highlight": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-pattern",
+    "type": "numbered-grid",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Le pattern qui émerge",
+      "items": [
+        {
+          "number": "1",
+          "text": "J'ai envie d'apprendre quelque chose"
+        },
+        {
+          "number": "2",
+          "text": "Je détecte une tendance et j'anticipe le marché"
+        },
+        {
+          "number": "3",
+          "text": "Je profite de l'opportunité pour lancer une entreprise"
+        },
+        {
+          "number": "4",
+          "text": "J'utilise cette entreprise comme excuse pour apprendre"
+        }
+      ]
+    }
+  },
+  {
+    "id": "always-early",
+    "type": "quote",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "quote": "À chaque fois, on me disait que j'étais en avance. À chaque fois, l'industrie a explosé dans les 24 mois."
+    }
+  },
+  {
+    "id": "mcdonalds-callback",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#FFC107"
+    },
+    "content": {
+      "title": "Le McDonald's de la vidéo",
+      "subtitle": "Je vous avais dit que ça allait revenir!"
+    }
+  },
+  {
+    "id": "cta-questions",
+    "type": "text-centered",
+    "background": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "content": {
+      "heading": "Questions?",
+      "body": "Je suis ouvert à tout."
+    }
+  },
+  {
+    "id": "cta-visit",
+    "type": "multi-section",
+    "background": {
+      "type": "color",
+      "value": "#FF6B35"
+    },
+    "content": {
+      "heading": "Prochaines étapes",
+      "sections": [
+        {
+          "text": "Si vous voulez voir le studio en personne, contactez-moi."
+        },
+        {
+          "text": "Si vous avez des clients en tête, parlons-en après."
+        }
+      ],
+      "theme": "dark"
+    }
+  },
+  {
+    "id": "thank-you",
+    "type": "title",
+    "background": {
+      "type": "color",
+      "value": "#1a1a1a"
+    },
+    "content": {
+      "title": "Merci!",
+      "subtitle": "lesbunkers.ca"
+    }
+  }
+]}

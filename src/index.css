@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-accent: #E94560;
+    --color-accent-rgb: 233, 69, 96;
+  }
+
   * {
     @apply box-border;
   }
