@@ -1,0 +1,449 @@
+{
+  "instructions": "These are the new slides to add to slidesConfig.json. See insertion points below.",
+  "new_slides": [
+    {
+      "insert_after_slide_id": "newsletter-impact",
+      "insert_position": "After slide 10",
+      "slide": {
+        "id": "communication-externe",
+        "type": "multi-section",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Communication Externe",
+          "sections": [
+            {
+              "title": "Acquisition",
+              "items": [
+                "• Reels et contenu social",
+                "• Publicités vidéo",
+                "• Formation en ligne pour lead gen",
+                "• Contenu organique pour cultiver une audience"
+              ],
+              "description": "Se faire connaître, générer des leads, construire une présence sur les médias sociaux"
+            },
+            {
+              "title": "Vente",
+              "items": [
+                "• Vidéos de présentation produit",
+                "• Unboxing et démonstrations",
+                "• Témoignages clients",
+                "• Pages de vente vidéo"
+              ],
+              "description": "Augmenter la conversion, répondre aux objections, démontrer la valeur"
+            },
+            {
+              "title": "Rétention",
+              "items": [
+                "• Webinaires exclusifs",
+                "• Contenu éducatif continu (podcast)",
+                "• Tutoriels support après-vente",
+                "• Mise à jour produit/service"
+              ],
+              "description": "Garder les clients informés, faciliter l'utilisation, fidéliser"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "communication-externe",
+      "insert_position": "After Communication Externe table",
+      "slide": {
+        "id": "communication-interne",
+        "type": "multi-section",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Communication Interne",
+          "sections": [
+            {
+              "title": "HR",
+              "items": [
+                "• Vidéos d'onboarding",
+                "• Processus de recrutement",
+                "• Culture d'entreprise",
+                "• Formation continue"
+              ],
+              "description": "Accélérer l'intégration des nouveaux employés, attirer les talents, standardiser la formation"
+            },
+            {
+              "title": "Investisseurs",
+              "items": [
+                "• Pitch deck vidéo",
+                "• Mise à jour trimestrielle",
+                "• Vision et roadmap",
+                "• Résultats et métriques"
+              ],
+              "description": "Communiquer la vision, transparence financière, lever des fonds"
+            },
+            {
+              "title": "Opérations",
+              "items": [
+                "• SOPs enregistrés",
+                "• Procédures techniques",
+                "• Best practices",
+                "• Documentation processus"
+              ],
+              "description": "Former les employés, standardiser les processus, réduire les erreurs, faciliter le scaling"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "communication-interne",
+      "insert_position": "After Communication Interne table",
+      "slide": {
+        "id": "video-not-just-social",
+        "type": "quote",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "quote": "La vidéo n'est pas juste un \"nice to have\" pour les médias sociaux. C'est un outil qui permet d'améliorer <span class=\"text-accent\">chaque aspect</span> d'une entreprise."
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "accessibility",
+      "insert_position": "After slide 38 (Accessibility quote)",
+      "slide": {
+        "id": "tech-stack-intro",
+        "type": "quote",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "quote": "Vous n'avez aucune idée à quel point c'est compliqué de rendre les choses <span class=\"text-accent\">simples</span>."
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "tech-stack-intro",
+      "insert_position": "After intro quote",
+      "note": "THIS SLIDE NEEDS A CUSTOM RENDERER - See notes below",
+      "slide": {
+        "id": "technology-stack",
+        "type": "tech-table",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Technologies orchestrées en un seul système",
+          "rows": [
+            {
+              "tech": "Dante",
+              "normal_use": "Routage audio pro (églises, théâtres, broadcast)",
+              "studio_role": "Matrice audio IP entre micros, interfaces et ordis"
+            },
+            {
+              "tech": "Art-Net/DMX",
+              "normal_use": "Contrôle d'éclairage de spectacles",
+              "studio_role": "Pilotage des lumières depuis l'automatisation"
+            },
+            {
+              "tech": "NDI",
+              "normal_use": "Transport vidéo IP (broadcast/studio)",
+              "studio_role": "Flux caméras / capture d'écran sans fil"
+            },
+            {
+              "tech": "vMix",
+              "normal_use": "Diffusion/production broadcast",
+              "studio_role": "Commutation, enregistrement, titres; contrôle via API"
+            },
+            {
+              "tech": "Home Assistant",
+              "normal_use": "Automatisation résidentielle",
+              "studio_role": "Orchestrateur: scènes, états, horaires, webhooks"
+            },
+            {
+              "tech": "MQTT",
+              "normal_use": "Bus M2M/IIoT",
+              "studio_role": "Événements/commandes temps réel entre tous les modules"
+            },
+            {
+              "tech": "Zigbee & Z-Wave",
+              "normal_use": "Protocoles IoT bas débit",
+              "studio_role": "Capteurs, relais et prises intégrés à HA"
+            },
+            {
+              "tech": "ESP32/Arduino",
+              "normal_use": "Électronique sur mesure",
+              "studio_role": "Nœuds I/O: moteurs/steppers, relais, capteurs"
+            },
+            {
+              "tech": "NSSM (Services Windows)",
+              "normal_use": "Wrapper de services",
+              "studio_role": "Démarre/monitore des daemons qui parlent MQTT"
+            },
+            {
+              "tech": "Onshape",
+              "normal_use": "Plateforme CAD 3D",
+              "studio_role": "Conception des pièces/mécanismes"
+            },
+            {
+              "tech": "Impression 3D",
+              "normal_use": "Prototypage",
+              "studio_role": "Pièces pour caméras robotisées (pan/tilt/axe Z)"
+            },
+            {
+              "tech": "Profilés d'alu extrudé (T-slot)",
+              "normal_use": "Châssis/DIY industriel",
+              "studio_role": "Structure modulaire des rigs et supports"
+            },
+            {
+              "tech": "Strapi",
+              "normal_use": "Headless CMS",
+              "studio_role": "Backend/API pour presets, scènes, assets"
+            },
+            {
+              "tech": "Vue.js / Nuxt",
+              "normal_use": "Framework web",
+              "studio_role": "UI opérateur et panneaux de contrôle"
+            },
+            {
+              "tech": "Discourse",
+              "normal_use": "Forum/communauté",
+              "studio_role": "Support, feedback, doc vivante"
+            }
+          ],
+          "footer": "Tout ça, orchestré en un seul système cohérent et automatisé."
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "technology-stack",
+      "insert_position": "After Technology Stack",
+      "slide": {
+        "id": "passion-quadrants",
+        "type": "icon-grid",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Ce projet me permet de mélanger",
+          "items": [
+            {
+              "iconName": "Camera",
+              "title": "Côté artiste",
+              "description": "de vidéaste"
+            },
+            {
+              "iconName": "Code",
+              "title": "Côté geek",
+              "description": "programmeur/ingénieur"
+            },
+            {
+              "iconName": "Wrench",
+              "title": "Côté manuel",
+              "description": "pour faire les studios"
+            },
+            {
+              "iconName": "Heart",
+              "title": "Côté humain",
+              "description": "design d'expérience"
+            }
+          ],
+          "columns": 2,
+          "footer": "Ma passion est parfaitement alignée avec le besoin de 80% des entreprises."
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "passion-quadrants",
+      "insert_position": "After Passion Quadrants",
+      "slide": {
+        "id": "client-goals",
+        "type": "icon-grid",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Pour créer un système qui permet aux entreprises de créer",
+          "items": [
+            {
+              "iconName": "Sparkles",
+              "title": "La plus belle vidéo possible"
+            },
+            {
+              "iconName": "Zap",
+              "title": "Le plus vite possible"
+            },
+            {
+              "iconName": "Smile",
+              "title": "Avec le moins de casse-tête possible"
+            },
+            {
+              "iconName": "DollarSign",
+              "title": "Le moins cher possible"
+            }
+          ],
+          "columns": 2
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "token-system",
+      "insert_position": "After slide 41 (Token System)",
+      "note": "PRICING DATA NEEDS TO BE FILLED IN - See placeholder structure",
+      "slide": {
+        "id": "pricing-packages",
+        "type": "multi-section",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Forfaits d'abonnement",
+          "subheading": "1 jeton = 1 bloc de 5 heures",
+          "sections": [
+            {
+              "type": "grid",
+              "items": [
+                {
+                  "label": "Forfait Découverte",
+                  "sublabel": "X jetons/mois",
+                  "price": "XX$/mois",
+                  "hourly": "XX.XX$/h"
+                },
+                {
+                  "label": "Forfait Standard",
+                  "sublabel": "X jetons/mois",
+                  "price": "XX$/mois",
+                  "hourly": "XX.XX$/h"
+                },
+                {
+                  "label": "Forfait Pro",
+                  "sublabel": "X jetons/mois",
+                  "price": "XX$/mois",
+                  "hourly": "12.48$/h",
+                  "highlight": true
+                }
+              ]
+            }
+          ],
+          "footer": "Meilleur forfait: 12.48$/heure | Pire forfait: 24.91$/heure"
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "pricing-packages",
+      "insert_position": "After Pricing Packages",
+      "slide": {
+        "id": "aligned-incentives",
+        "type": "feature-list",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Incitatifs alignés",
+          "features": [
+            {
+              "iconName": "TrendingDown",
+              "title": "Utilisation fréquente = prix plus bas",
+              "description": "Si tu vas au studio une fois par semaine, tu n'auras presque jamais besoin de support"
+            },
+            {
+              "iconName": "Clock",
+              "title": "Pas de stress de temps",
+              "description": "5 heures par bloc. Invité en retard? Pas de problème. Prends ton temps pour tester."
+            },
+            {
+              "iconName": "Calendar",
+              "title": "Réserver est simple",
+              "description": "Tu choisis ton bloc, tu réserves. Accès autonome, pas de réceptionniste."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "aligned-incentives",
+      "insert_position": "After Aligned Incentives (optional - can be image)",
+      "slide": {
+        "id": "booking-interface",
+        "type": "image-text",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Système de réservation",
+          "body": "Interface simple. Choisis ton bloc (matin, après-midi, soir). Réserve. C'est fait.",
+          "imagePlaceholder": "Screenshot du système de réservation"
+        }
+      }
+    },
+    {
+      "insert_after_slide_id": "who-am-i",
+      "insert_position": "Before current timeline (slide 44)",
+      "slide": {
+        "id": "early-career",
+        "type": "numbered-grid",
+        "background": {
+          "type": "color",
+          "value": "#FFFFFF"
+        },
+        "content": {
+          "heading": "Les débuts (2003-2012)",
+          "items": [
+            {
+              "number": "1",
+              "text": "McDonald's - Premier emploi, apprendre à servir des clients"
+            },
+            {
+              "number": "2",
+              "text": "WETS (2007) - Première entreprise à 16 ans. E-commerce porte-à-porte"
+            },
+            {
+              "number": "3",
+              "text": "Consultant freelance - Sites web et graphisme pendant les études"
+            },
+            {
+              "number": "4",
+              "text": "Blogue (2012) - Partage hebdomadaire de résultats clients"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timeline_updates": {
+    "note": "Add these events to the BEGINNING of the existing timeline (slide 44)",
+    "prepend_events": [
+      {
+        "year": "2003",
+        "title": "McDonald's",
+        "description": "Premier emploi",
+        "highlight": false
+      },
+      {
+        "year": "2007",
+        "title": "WETS - Première entreprise",
+        "description": "E-commerce porte-à-porte à 16 ans",
+        "highlight": true
+      },
+      {
+        "year": "2007-2012",
+        "title": "Consultant freelance",
+        "description": "Sites web, graphisme",
+        "highlight": false
+      }
+    ]
+  },
+  "renderer_notes": {
+    "tech-table": "The 'tech-table' type needs a custom renderer in SlideRenderer.jsx. Suggested implementation: 3-column table with headers 'Technologie | Usage habituel | Rôle dans le studio'. Use small font (text-xs or text-sm) to fit 15 rows. Consider making it scrollable or splitting into 2 slides.",
+    "multi-section_updates": "The multi-section type may need enhancement to support the table-like structure for Communication Externe/Interne. Current multi-section might work, but verify rendering."
+  }
+}
