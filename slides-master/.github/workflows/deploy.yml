@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
@@ -26,12 +26,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: 'slides-master/package-lock.json'
 
       - name: Install dependencies
         run: npm ci
+        working-directory: ./slides-master
 
       - name: Build
         run: npm run build
+        working-directory: ./slides-master
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -39,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './slides-master/dist'
 
   deploy:
     environment:
